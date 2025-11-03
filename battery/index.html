@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Battery Charging Monitor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Live Battery Monitor</h1>
+            <p class="subtitle">Real-time battery status and charging information</p>
+        </header>
+        
+        <div class="battery-container">
+            <div class="battery-outline">
+                <div class="battery-level" id="battery-level"></div>
+            </div>
+            <div class="battery-info">
+                <span>0%</span>
+                <span id="battery-percentage">50%</span>
+                <span>100%</span>
+            </div>
+        </div>
+        
+        <div class="charging-status" id="charging-status">
+            Checking battery status...
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Battery Level</div>
+                <div class="stat-value" id="level-value">--%</div>
+                <div class="stat-desc">Current charge</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Charging Time</div>
+                <div class="stat-value" id="charging-time">--:--</div>
+                <div class="stat-desc">Until full</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Discharging Time</div>
+                <div class="stat-value" id="discharging-time">--:--</div>
+                <div class="stat-desc">Until empty</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Battery Health</div>
+                <div class="stat-value" id="battery-health">--%</div>
+                <div class="stat-desc">Estimated capacity</div>
+            </div>
+        </div>
+        
+        <div class="history-chart" id="history-chart">
+            <!-- Battery history bars will be generated here -->
+        </div>
+        
+        <div class="controls">
+            <button id="refresh-btn">Refresh Status</button>
+            <button id="simulate-btn">Simulate Charging</button>
+        </div>
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

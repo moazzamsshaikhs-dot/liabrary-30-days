@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-size: 62.5%;
+    text-decoration: none;
+    font-family: 'Roboto';
+    outline: none;
+}
+.container{
+    background:linear-gradient(135deg,#cf9aff,#95c0ff);
+    color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    padding-top:4% ;
+    padding-left: 10%; 
+}
+.container h1{
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.container h1 img{
+    width: 6rem;
+}
+.container button img{
+    width: 2.5rem;
+    margin-right: 0.8rem;
+}
+.container button{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9418fd,#571094);
+    color: #fff;
+    font-size: 1.6rem;
+    border-radius: 4rem;
+    padding: 1.5rem 2.5rem;
+    margin: 3rem 0 2rem;
+    cursor: pointer;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+    min-height: 15rem;
+    background-color: #fff;
+    color: #333;
+    padding: 2rem; 
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+}
+.input-box img{
+    width: 2.5rem;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+}
+
+
+@media(max-width:500px){
+    .input-box{
+    position: relative;
+    width: 100%;
+    max-width: 33.3rem;
+    min-height: 15rem;
+    background-color: #fff;
+    color: #333;
+    padding: 2rem; 
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+}

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-size: 62.5%;
+    text-decoration: none;
+    font-family: "Roboto", serif;
+    outline: none;
+}
+body{
+    background-color: #e3edf7;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+}
+.skill{
+    width: 16rem;
+    height: 16rem;
+    /* background-color: cornflowerblue; */
+    position: relative;
+}
+.outer{
+    height: 16rem;
+    width: 16rem;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    padding: 2rem;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+    -6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+.inner{
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+    inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+    -0.5px -0.5px 0px rgba(255,255,255,1),
+    0.5px 0.5px 0px rgba(0,0,0,0.15),
+    0px 12px 10px -10px rgba(0,0,0,0.05);
+}
+.skill .outer .inner #number{
+    font-weight: 600;
+    color: #555;
+    font-size: 1.9rem;
+}
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 2rem;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+}
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 165;
+    }
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}

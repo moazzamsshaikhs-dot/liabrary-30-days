@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-size: 62.5%;
+    text-decoration: none;
+    font-family: 'Roboto', serif;
+    outline: none;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #0b0423;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#left, #right{
+    width: 28rem;
+    min-height: 40rem;
+    margin: 1rem;
+    border: 2px dashed #fff;
+}
+.list{
+    background-color: #e91e63;
+    height: 6rem;
+    margin: 3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    font-size: 1.6rem;
+}
+.list img{
+    width: 1rem;
+    margin-right: 1.5rem;
+    margin-left: 2rem;
+}

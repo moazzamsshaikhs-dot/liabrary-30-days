@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./rand.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate <br><span>Random Password</span></h1>
+        <div class="display">
+            <input type="text" id="password" placeholder="Your password will appear here" readonly>
+            <img src="./images/copy.png" alt="Copy password" title="Copy to clipboard" onclick="copyPassword()">
+        </div>
+        <button onclick="createPassword()">
+            <img src="./images/generate.png" alt=""> 
+            Generate Password
+        </button>
+    </div>
+    
+    <div class="toast" id="toast">Password copied to clipboard!</div>
+
+    <script src="./rand.js"></script>
+</body>
+</html>

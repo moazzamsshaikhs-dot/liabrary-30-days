@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload image</title>
+    <link rel="stylesheet" href="./upload.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="card">
+            <h1>Upload Image</h1>
+            <p>Only upload the jpeg, png and jpg</p>
+            <img src="./images/profile.png" id="profile-pic">
+            <label for="input-file">Update Image</label>
+            <input type="file" accept="images/jpeg, images/png, images/jpg" id="input-file">
+        </div>
+    </div>
+
+    <script>
+        let profilepic = document.querySelector("#profile-pic");
+        let inputfile = document.querySelector("#input-file");
+
+        inputfile.onchange = function(){
+            profilepic.src = URL.createObjectURL(inputfile.files[0]);
+        }
+    </script>
+</body>
+</html>

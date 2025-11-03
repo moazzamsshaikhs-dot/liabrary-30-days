@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    font-family: "Courier Prime", monospace;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #edeaff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.stopwatch {
+    width: 100%;
+    max-width: 60rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.stopwatch h1 {
+    margin: 3rem 0 4rem;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.buttons img {
+    width: 5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: brightness(0.9);
+}
+
+.buttons img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.buttons img:nth-child(2) {
+    width: 7rem;
+}
+
+/* Lap times feature */
+.lap-times {
+    margin-top: 3rem;
+    max-height: 20rem;
+    overflow-y: auto;
+    padding: 0 1rem;
+}
+
+.lap-times h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+.lap-list {
+    list-style: none;
+}
+
+.lap-item {
+    font-size: 1.6rem;
+    padding: 0.8rem;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lap-number {
+    color: #ff6b6b;
+}
+
+.lap-time {
+    color: #4ecdc4;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    html {
+        font-size: 58%;
+    }
+
+    .stopwatch {
+        padding: 3rem 1.5rem;
+        max-width: 50rem;
+    }
+
+    .stopwatch h1 {
+        font-size: 5rem;
+        margin: 2rem 0 3rem;
+    }
+
+    .buttons {
+        gap: 1.5rem;
+    }
+
+    .buttons img {
+        width: 4.5rem;
+    }
+
+    .buttons img:nth-child(2) {
+        width: 6.5rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        padding: 1.5rem;
+    }
+
+    .stopwatch {
+        padding: 2.5rem 1rem;
+        border-radius: 1rem;
+    }
+
+    .stopwatch h1 {
+        font-size: 4rem;
+        margin: 1.5rem 0 2.5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .buttons {
+        gap: 1rem;
+    }
+
+    .buttons img {
+        width: 4rem;
+    }
+
+    .buttons img:nth-child(2) {
+        width: 6rem;
+    }
+
+    .lap-times {
+        margin-top: 2rem;
+        max-height: 15rem;
+    }
+
+    .lap-times h3 {
+        font-size: 1.6rem;
+    }
+
+    .lap-item {
+        font-size: 1.4rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 360px) {
+    html {
+        font-size: 50%;
+    }
+
+    .stopwatch h1 {
+        font-size: 3.5rem;
+    }
+
+    .buttons {
+        gap: 0.8rem;
+    }
+
+    .buttons img {
+        width: 3.5rem;
+    }
+
+    .buttons img:nth-child(2) {
+        width: 5rem;
+    }
+}
+
+/* Custom scrollbar for lap times */
+.lap-times::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.lap-times::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+}
+
+.lap-times::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+}
+
+.lap-times::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Animation for time display */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 1s ease-in-out;
+}
