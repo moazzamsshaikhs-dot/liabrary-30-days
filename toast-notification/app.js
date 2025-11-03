@@ -1,27 +1,23 @@
-let toastbox =document.querySelector("#toastbox");
-let sucessmsg = '<i class="fa-solid fa-circle-check"></i> Successfully submited';
-let Errormsg = '<i class="fa-solid fa-circle-xmark"></i> Please fix the error!';
-let Invalidmsg = '<i class="fa-solid fa-circle-exclamation"></i> Invalid input, check again';
+const toastbox = document.querySelector("#toastbox");
+const successMsg = '<i class="fa-solid fa-circle-check"></i> Successfully submitted';
+const errorMsg = '<i class="fa-solid fa-circle-xmark"></i> Please fix the error!';
+const invalidMsg = '<i class="fa-solid fa-circle-exclamation"></i> Invalid input, check again';
 
-
-
-
-
-function showtoast(msg){
-    let toast =document.createElement("div");
+function showToast(msg) {
+    let toast = document.createElement("div");
     toast.classList.add("toast");
-    toast.innerHTML = msg ;
+    toast.innerHTML = msg;
 
     toastbox.appendChild(toast);
 
-    if(msg.includes('error')){
+    if (msg.includes('error')) {
         toast.classList.add("error");
     }
-    if(msg.includes('Invalid')){
+    if (msg.includes('Invalid')) {
         toast.classList.add("invalid");
     }
 
-    setTimeout(()=>{
+    setTimeout(() => {
         toast.remove();
-    },6000)
+    }, 6000);
 }
